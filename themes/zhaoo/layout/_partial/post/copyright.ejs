@@ -1,0 +1,10 @@
+<ul class="copyright">
+  <% if (theme.carrier.enable && page.carrier) { %>
+    <li><strong>版权声明：</strong>本文作者放棄版權大家随意搬運，特此奉上搬運連結：<a href="javascript:;" class="j-carrier-btn">一鍵打包帶走</a></li>
+    <input value="<%= carrier(); %>" class="j-carrier-data carrier-data">
+  <% } else { %>
+    <li><strong>本文作者：</strong><%= config.author %></li>
+    <li><strong>本文連結：</strong><%- link_to(full_url_for(url), full_url_for(url)) %></li>
+    <li><strong>版權聲明：</strong>本博客所有文章均采用 <%- link_to('https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh', 'BY-NC-SA', {external: true}) %> 許可協議，轉載請標明出處</li>
+  <% } %>
+</ul>
