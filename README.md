@@ -1,7 +1,9 @@
-# HexoBackUo
+# HexoBackUp
 我的Hexo 備份
 
 執行 hexoc.sh 加上指令 s 或 d
+
+## 指令s
 
 ```bash
 ./hexoc.sh s
@@ -12,6 +14,8 @@
 ```bash
 hexo clean && hexo g && hexo s 
 ```
+
+## 指令d
 
 ```bash
 ./hexoc.sh d
