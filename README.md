@@ -1,6 +1,8 @@
 # HexoBackUp
 我的Hexo 備份
 
+[Hexo網址](www.yuweikuo.top)
+
 執行 hexoc.sh 加上指令 s 或 d
 
 ## 指令s
