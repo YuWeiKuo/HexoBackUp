@@ -2,3 +2,6 @@
 
 # 忽略source/*
 source/
+
+#忽略zhaoo/image/theme/*
+themes/zhaoo/source/images/theme
