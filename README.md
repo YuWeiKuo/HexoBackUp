@@ -72,7 +72,7 @@ ejs.render('<?= users.join(" | "); ?>', {users: users},
 
 ## Hexo-renderer-marked
 
-在_config.yml 裡加上以下, 主要是lazyload
+在根目錄_config.yml 裡加上以下, 主要是lazyload
 ```yml
 marked:
   gfm: true
@@ -136,7 +136,7 @@ theme.favicon.apple_touch_icon
 theme.favicon.safari_pinned_tab
 theme.favicon.msapplication
 ```
-等等，則是在theme檔案夾裡的_config.yml的favicon設定
+等等，則是在theme檔案夾裡zhaoo(選用的主題)的_config.yml的favicon設定
 
 ```yml
 favicon:
