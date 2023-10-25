@@ -3,6 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
+# hexo node.js 裡的config.title
 title: 隨遇而安
 subtitle: ''
 description: ''
