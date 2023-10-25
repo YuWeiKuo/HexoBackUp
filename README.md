@@ -129,16 +129,16 @@ config.timezone
 ```
 
 如果是
-···js
+```js
 theme.favicon.small
 theme.favicon.median
 theme.favicon.apple_touch_icon
 theme.favicon.safari_pinned_tab
 theme.favicon.msapplication
-···
+```
 等等，則是在theme檔案夾裡的_config.yml的favicon設定
 
-···yml
+```yml
 favicon:
   small: /images/icons/favicon-16x16.png
   medium: /images/icons/favicon-32x32.png
