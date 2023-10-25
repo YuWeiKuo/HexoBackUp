@@ -70,5 +70,34 @@ ejs.render('<?= users.join(" | "); ?>', {users: users},
 ```
 意思是將符號%改為?
 
+## Hexo-renderer-marked
+
+在_config.yml 裡加上以下, 主要是lazyload
+```yml
+marked:
+  gfm: true
+  pedantic: false
+  breaks: true
+  smartLists: true
+  smartypants: true
+  quotes: '“”‘’'
+  modifyAnchors: 0
+  anchorAlias: false
+  autolink: true
+  mangle: true
+  sanitizeUrl: false
+  dompurify: false
+  headerIds: true
+  lazyload: false
+  prependRoot: true
+  postAsset: false
+  external_link:
+    enable: false
+    exclude: []
+    nofollow: false
+  disableNunjucks: false
+  descriptionLists: true
+```
+
 
 
