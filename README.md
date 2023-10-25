@@ -98,6 +98,51 @@ marked:
   disableNunjucks: false
   descriptionLists: true
 ```
+## Hexo 
 
+### 變量
 
+config.參數
+這裡的參數是根目錄_config.yml裡面的設定值
+比如_config.yml
 
+```yml
+# Site
+title: 隨遇而安
+subtitle: ''
+description: ''
+keywords: William Kuo
+author: William Kuo
+language: zh-CN
+timezone: 
+```
+
+則相對應的hexo config.參數為
+```js
+config.title
+config.subtitle
+config.description
+config.keywords
+config.author
+config.language
+config.timezone
+```
+
+如果是
+···js
+theme.favicon.small
+theme.favicon.median
+theme.favicon.apple_touch_icon
+theme.favicon.safari_pinned_tab
+theme.favicon.msapplication
+···
+等等，則是在theme檔案夾裡的_config.yml的favicon設定
+
+···yml
+favicon:
+  small: /images/icons/favicon-16x16.png
+  medium: /images/icons/favicon-32x32.png
+  apple_touch_icon: /images/icons/apple-touch-icon.png
+  safari_pinned_tab: /images/icons/stun-logo.svg
+  msapplication: /images/icons/favicon-144x144.png
+```
