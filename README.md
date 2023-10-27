@@ -146,3 +146,52 @@ favicon:
   safari_pinned_tab: /images/icons/stun-logo.svg
   msapplication: /images/icons/favicon-144x144.png
 ```
+
+### hexo.extend.console.register 
+
+node_modules/hexo-server/index.js 筆記
+
+```js
+'use strict';
+```
+[use strict](https://www.runoob.com/js/js-strict.html)
+嚴格模式: 在指定代碼嚴格環境下執行
+
+
+```js
+hexo.config.server = Object.assign({
+  port: 4000,
+  log: false,
+  // `undefined` uses Node's default (try `::` with fallback to `0.0.0.0`)
+  ip: undefined,
+  compress: false,
+  header: true
+}, hexo.config.server);
+```
+config 是全局變量網站設置
+[變量](https://hexo.io/zh-cn/docs/variables)
+
+
+```js
+hexo.extend.console.register('server', 'Start the server.', {
+  desc: 'Start the server and watch for file changes.',
+  options: [
+    {name: '-i, --ip', desc: 'Override the default server IP. Bind to all IP address by default.'},
+    {name: '-p, --port', desc: 'Override the default port.'},
+    {name: '-s, --static', desc: 'Only serve static files.'},
+    {name: '-l, --log [format]', desc: 'Enable logger. Override log format.'},
+    {name: '-o, --open', desc: 'Immediately open the server url in your default web browser.'}
+  ]
+}, require('./lib/server'));
+```
+console 為控制台, 裡面有控制台命令
+server 為 config的屬性, config.server
+start the server 為console的命令
+desc 是 description (描述)
+option 為選項:
+選項i $\rightarrow$ hexo s -i 
+
+
+
+
+
