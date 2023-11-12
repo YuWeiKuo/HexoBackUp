@@ -147,9 +147,9 @@ favicon:
   msapplication: /images/icons/favicon-144x144.png
 ```
 
-### hexo.extend.console.register 
+### node_modules/hexo-server/index.js 筆記
 
-node_modules/hexo-server/index.js 筆記
+#### hexo.extend.console.register 
 
 ```js
 'use strict';
@@ -190,8 +190,32 @@ start the server 為console的命令
 desc 是 description (描述)
 option 為選項:
 選項i $\rightarrow$ hexo s -i 
+選項o $\rightarrow$ hexo s -o 是架設好本地端server後在瀏覽器開啟頁面 
 
+#### hexo.extend.filter.register
 
+[filter](https://hexo.io/zh-cn/api/filter) 的用法是修改特定文件
+server_middleware 是在文件中加入中間件 (server_middleware是一種過濾器)
+
+```js
+hexo.extend.filter.register('server_middleware', require('./lib/middlewares/header'));
+hexo.extend.filter.register('server_middleware', require('./lib/middlewares/gzip'));
+hexo.extend.filter.register('server_middleware', require('./lib/middlewares/logger'));
+hexo.extend.filter.register('server_middleware', require('./lib/middlewares/route'));
+hexo.extend.filter.register('server_middleware', require('./lib/middlewares/static'));
+hexo.extend.filter.register('server_middleware', require('./lib/middlewares/redirect'));
+```
+以上代碼為註冊名為server_middleware的過濾器，而他需要require一些檔案。
+
+另一個例子
+
+```js
+hexo.extend.filter.register('before_post_render', function(data){
+  data.title = data.title.toLowerCase();
+  return data;
+});
+```
+註冊before_post_render過濾器，過濾器裡面的有function(data)，data作為第一個形參，會傳入每一個過濾器([執行過濾器章節有介紹](https://hexo.io/zh-cn/api/filter))。
 
 
 
