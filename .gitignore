@@ -1,7 +1,7 @@
 # 檔案名稱.gitignore
 
 # 忽略source/*
-source/
+source/_post/*.md
 
 #忽略zhaoo/image/theme/*
 themes/zhaoo/source/images
