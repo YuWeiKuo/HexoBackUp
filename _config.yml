@@ -3,12 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-# hexo node.js 裡的config.title
-# 還是 site.title ? https://hexo.io/zh-cn/docs/variables
 title: 隨遇而安
 subtitle: ''
 description: ''
-keywords:
+keywords: William Kuo
 author: William Kuo
 language: zh-CN
 timezone: ''
@@ -46,6 +44,7 @@ post_asset_folder: true
 marked:
   prependRoot: true
   postAsset: true
+  lazyload: true
 relative_link: false
 future: true
 highlight:
@@ -86,7 +85,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## updated_option supports 'mtime', 'date', 'empty'
-updated_option: 'mtime'
+updated_option: 'date'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
