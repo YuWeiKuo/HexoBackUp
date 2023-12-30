@@ -3,7 +3,8 @@
   <div class="head-mask">
     <h1 class="head-title"><%= page.title %></h1>
     <div class="head-info">
-      <span class="post-info-item"><i class="iconfont iconcalendar"></i><%= date(page.date, "MMMM DD, YYYY") %></span>
+      <span class="post-info-item"> 首發 <i class="iconfont iconcalendar"></i><%= date(page.date, "MM. DD, YYYY") %></span>
+      <span class="post-info-item"> 修改 <i class="iconfont iconcalendar"></i><%= date(page.updated, "MM. DD, YYYY") %></span>
       <% if (theme.leancloud.enable) { %>
         <span class="post-info-item">
           <i class="iconfont iconeye"></i><span id="<%- url_for(page.path) %>" class="leancloud-counter" data-flag-title="<%- page.title %>"></span>
